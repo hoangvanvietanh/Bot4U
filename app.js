@@ -153,7 +153,7 @@ function receivedMessage(event) {
     var listWordGreeting = ["hi", "Hi", "Hello", "hello", "chào", "chao"]
     var listWordLove = ["yêu bạn", "thích bạn", "mãi yêu", "mai yeu", "thich ban", "yeu may", "yêu mày", "yeu ban", "yêu m", "yeu m"]
     var listWordsFun = ["vl", "vãi", "shit"]
-    var listWordSwearing = ["lồn", "cặc", "đcm", "clm", "óc chó", "khốn nạn", "đm", "dm", "oc cho", "thằng chó", "địt mẹ", "dit me", "mẹ mày", "me may", "cmm", "dcm", "con cho", "con chó", "cac", "lon", "fuck","cc"];
+    var listWordSwearing = ["lồn", "cặc", "đcm", "clm", "óc chó", "khốn nạn", "đm", "dm", "oc cho", "thằng chó", "địt mẹ", "dit me", "mẹ mày", "me may", "cmm", "dcm", "con cho", "con chó", "cac", "lon", "fuck", "cc", "cức", "Cức"];
     var listCrush = ["a iu e", "anh yêu em", "nhớ em quá", "em đang làm gì đó"]
     messageResult = getMesseageFromListWord(listWordSwearing, messageText, "swearing");
     if (messageResult == "noResults") {
@@ -208,6 +208,15 @@ function receivedMessage(event) {
         break;
       case 'apply':
         sendTextMessage(senderID, "Đăng ký thành công nè :) ");
+        listUser.push(senderID);
+        break;
+
+      case 'Alo':
+        sendTextMessage(senderID, "Alo con khỉ :)");
+        listUser.push(senderID);
+        break;
+      case 'alo':
+        sendTextMessage(senderID, "Alo con khỉ :)");
         listUser.push(senderID);
         break;
       case 'greeting':
