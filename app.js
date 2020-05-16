@@ -154,6 +154,7 @@ function receivedMessage(event) {
     var listWordLove = ["yêu bạn", "thích bạn", "mãi yêu", "mai yeu", "thich ban", "yeu may", "yêu mày", "yeu ban", "yêu m", "yeu m"]
     var listWordsFun = ["vl", "vãi", "shit"]
     var listWordSwearing = ["lồn", "cặc", "đcm", "clm", "óc chó", "khốn nạn", "đm", "dm", "oc cho", "thằng chó", "địt mẹ", "dit me", "mẹ mày", "me may", "cmm", "dcm", "con cho", "con chó", "cac", "lon", "fuck","cc"];
+    var listCrush = ["a iu e", "anh yêu em", "nhớ em quá", "em đang làm gì đó"]
     messageResult = getMesseageFromListWord(listWordSwearing, messageText, "swearing");
     if (messageResult == "noResults") {
       messageResult = getMesseageFromListWord(listWordsFun, messageText, "funword");
@@ -167,6 +168,9 @@ function receivedMessage(event) {
     if (messageResult == "noResults") {
       messageResult = getMesseageFromListWord(listLaugh, messageText, "laugh");
     }
+    if (messageResult == "noResults") {
+      messageResult = getMesseageFromListWord(listCrush, messageText, "crush");
+    }
 
     if (messageResult == "noResults") {
       messageResult = messageText;
@@ -176,6 +180,11 @@ function receivedMessage(event) {
     switch (messageResult) {
       case 'generic':
         sendGenericMessage(senderID);
+        break;
+      case 'crush':
+        message = ["e cũng iu a ", "em yêu anh ", "cũng nhớ anh nữa nè <3 ", "em đang chờ anh tới nè, anh ơi! "];
+        randomAnswer = message[Math.floor(Math.random() * message.length)];
+        sendTextMessage(senderID, randomAnswer);
         break;
       case 'love':
         message = ["Mình cũng yêu bạn <3 ", "Xin lỗi mình có người yêu là Việt Anh rồi :) ", "Mình có người yêu rồi, nhưng mình sẽ cho nó mọc sừng nếu bạn muốn -D :D =D "];
