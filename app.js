@@ -5,7 +5,7 @@ const request = require('request');
 const path = require('path');
 var Luu_tru = require("./Xu_ly/XL_LUU_TRU")
 var messengerButton = "<html><head><title>Facebook Messenger Bot</title></head><body><h1>Facebook Messenger Bot</h1>This is a bot based on Messenger Platform QuickStart. For more details, see their <a href=\"https://developers.facebook.com/docs/messenger-platform/guides/quick-start\">docs</a>.<script src=\"https://button.glitch.me/button.js\" data-style=\"glitch\"></script><div class=\"glitchButton\" style=\"position:fixed;top:20px;right:20px;\"></div></body></html>";
-var PAGE_ACCESS_TOKEN = "EAAJumKeUliYBAIS1IM8zDPbuy7ldiKrNWHF2s34ZAH51vTkAL5AwSyMQXbTJNSplzrCSXKSVWlWvZATOax9w6AZCNnGjUIEUxxlsZCrErCzpXrU58GewA4auReTpNvYv1teC9hEt8dXIafqvt3Foiwajhn2ZAes333BMCisTuQM7193ciZAytk7WChDkJRySIZD";
+var PAGE_ACCESS_TOKEN = "EAAJumKeUliYBAFxcknB9m4FXJKUXYvJHKY3S7dlZBgrGCBwYM1swgmJUUc8YcJjdxKfdwnqZAiIH4a0XTegEiljERmBJiQfIQT8LfWN6ByebNNK3by0KOXted4u2XzXsAzYiU15cs3OAtTw2Gnu284t8kbFU4qETKeg2GmxUF00Pmc70EgX6UlIQT91n7FujxBPYciXPDRFLswseZCT";
 var VERIFY_TOKEN = "vietanh";
 var Du_lieu = {}
 var listUser = ["3043075672420456"];
